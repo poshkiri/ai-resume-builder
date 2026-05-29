@@ -4,8 +4,8 @@
 
 :root {
   color-scheme: dark;
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  background: #050711;
+  font-family: Manrope, Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #070806;
 }
 
 html {
@@ -16,33 +16,47 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #050711;
+  background: #070806;
 }
 
 * {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+.brand-logo {
+  font-family: Sora, Manrope, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
 @layer components {
   .brand-logo {
     @apply inline-flex min-w-0 items-center gap-3 text-base font-semibold text-white transition duration-300 sm:text-lg;
-    text-shadow: 0 0 24px rgba(34, 211, 238, 0.22);
+    text-shadow: 0 0 24px rgba(200, 255, 90, 0.16);
   }
 
   .brand-mark {
-    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-cyan-300/25 bg-cyan-300/10 text-cyan-100 shadow-glow;
+    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border text-zinc-950 shadow-glow;
+    background: linear-gradient(135deg, #f5f5ee 0%, #a8afa4 45%, #d7a85f 100%);
+    border-color: rgba(232, 236, 226, 0.32);
   }
 
   .btn-primary {
-    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-500 px-5 py-3 text-center font-semibold text-[#04101c] shadow-glow transition duration-300 hover:-translate-y-1 hover:shadow-violet active:translate-y-0;
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 py-3 text-center font-semibold text-zinc-950 shadow-glow transition duration-300 hover:-translate-y-1 active:translate-y-0;
+    background: linear-gradient(135deg, #f4f4ee 0%, #c8ff5a 48%, #d7a85f 100%);
+    border: 1px solid rgba(244, 244, 238, 0.42);
   }
 
   .btn-secondary {
-    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-center font-semibold text-white backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-200/45 hover:bg-cyan-300/10 active:translate-y-0;
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 py-3 text-center font-semibold text-white backdrop-blur transition duration-300 hover:-translate-y-1 active:translate-y-0;
+    border: 1px solid rgba(232, 236, 226, 0.11);
+    background: linear-gradient(135deg, rgba(232, 236, 226, 0.08), rgba(215, 168, 95, 0.08));
   }
 
   .glass-panel {
-    @apply relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.055] p-5 shadow-[0_24px_90px_rgba(0,0,0,0.24)] backdrop-blur-2xl sm:p-7;
+    @apply relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.055] p-5 shadow-[0_24px_90px_rgba(0,0,0,0.34)] backdrop-blur-2xl sm:p-7;
   }
 
   .glass-panel::before {
@@ -50,8 +64,8 @@ body {
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(circle at 18% 0%, rgba(34, 211, 238, 0.12), transparent 30%),
-      radial-gradient(circle at 100% 8%, rgba(139, 92, 246, 0.13), transparent 28%);
+      radial-gradient(circle at 18% 0%, rgba(200, 255, 90, 0.12), transparent 30%),
+      radial-gradient(circle at 100% 8%, rgba(215, 168, 95, 0.13), transparent 28%);
     pointer-events: none;
   }
 
@@ -61,44 +75,44 @@ body {
   }
 
   .field-group {
-    @apply block rounded-2xl border border-white/10 bg-black/15 p-4 transition duration-300 focus-within:border-cyan-200/45 focus-within:bg-cyan-300/[0.04] focus-within:shadow-glow;
+    @apply block rounded-2xl border border-white/10 bg-black/15 p-4 transition duration-300 focus-within:border-lime-200/45 focus-within:bg-lime-300/[0.04] focus-within:shadow-glow;
   }
 
   .field-label {
-    @apply mb-3 flex items-center gap-2 text-sm font-medium text-slate-200;
+    @apply mb-3 flex items-center gap-2 text-sm font-medium text-zinc-200;
   }
 
   .field-input {
-    @apply w-full rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3 text-base leading-7 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-200/50 focus:bg-white/[0.075];
+    @apply w-full rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3 text-base leading-7 text-white outline-none transition placeholder:text-zinc-500 focus:border-lime-200/50 focus:bg-white/[0.075];
   }
 
   .hero-card {
-    @apply relative overflow-hidden rounded-[28px] border border-cyan-300/20 bg-white/[0.06] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_0_78px_rgba(34,211,238,0.18),0_0_110px_rgba(139,92,246,0.14)] backdrop-blur-2xl sm:p-8;
+    @apply relative overflow-hidden rounded-[28px] border border-lime-300/20 bg-white/[0.06] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_0_78px_rgba(34,211,238,0.18),0_0_110px_rgba(139,92,246,0.14)] backdrop-blur-2xl sm:p-8;
   }
 
   .resume-paper {
-    @apply rounded-[22px] bg-slate-50 p-5 text-slate-950 shadow-[0_30px_90px_rgba(0,0,0,0.3)] sm:p-7;
+    @apply rounded-[22px] bg-zinc-50 p-5 text-zinc-950 shadow-[0_30px_90px_rgba(0,0,0,0.3)] sm:p-7;
   }
 }
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(34, 211, 238, 0.075) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 211, 238, 0.075) 1px, transparent 1px);
+    linear-gradient(rgba(200, 255, 90, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 255, 90, 0.075) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.45), transparent);
 }
 
 .bg-glow {
   background:
-    radial-gradient(circle at 18% 16%, rgba(34, 211, 238, 0.22), transparent 27%),
-    radial-gradient(circle at 86% 12%, rgba(139, 92, 246, 0.19), transparent 24%),
-    radial-gradient(circle at 50% 82%, rgba(59, 130, 246, 0.12), transparent 32%),
-    linear-gradient(180deg, rgba(5, 7, 17, 0.1), #050711 72%);
+    radial-gradient(circle at 18% 16%, rgba(200, 255, 90, 0.22), transparent 27%),
+    radial-gradient(circle at 86% 12%, rgba(215, 168, 95, 0.19), transparent 24%),
+    radial-gradient(circle at 50% 82%, rgba(216, 221, 210, 0.12), transparent 32%),
+    linear-gradient(180deg, rgba(5, 7, 17, 0.1), #070806 72%);
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.28);
+  background: rgba(200, 255, 90, 0.28);
 }
 
 @media (max-width: 460px) {

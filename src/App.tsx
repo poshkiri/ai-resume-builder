@@ -139,7 +139,7 @@ function App() {
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#050711] text-white">
+    <main className="min-h-screen overflow-hidden bg-[#070806] text-white">
       <div className="fixed inset-0 -z-10 bg-grid" />
       <div className="fixed inset-0 -z-10 bg-glow" />
 
@@ -161,7 +161,7 @@ function App() {
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#050711]/78 backdrop-blur-2xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070806]/78 backdrop-blur-2xl">
       <nav className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <a href="#" className="brand-logo">
           <span className="brand-mark" aria-hidden="true">
@@ -170,7 +170,7 @@ function Header() {
           <span className="truncate">AI Resume Builder</span>
         </a>
 
-        <a href="https://github.com/poshkiri" target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.055] px-4 py-2 text-sm text-slate-200 transition hover:-translate-y-0.5 hover:border-cyan-200/40 hover:bg-cyan-300/10 sm:inline-flex">
+        <a href="https://github.com/poshkiri" target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.055] px-4 py-2 text-sm text-zinc-200 transition hover:-translate-y-0.5 hover:border-lime-200/40 hover:bg-lime-300/10 sm:inline-flex">
           <Github className="h-4 w-4" />
           GitHub
         </a>
@@ -183,14 +183,14 @@ function Hero({ completion, onFillExample }: { completion: number; onFillExample
   return (
     <section className="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-12 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:pb-16 lg:pt-16">
       <motion.div initial="hidden" animate="visible" variants={stagger} className="relative z-10">
-        <motion.div variants={fadeUp} className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-100 shadow-glow backdrop-blur">
-          <Sparkles className="h-4 w-4 text-cyan-300" />
+        <motion.div variants={fadeUp} className="mb-5 inline-flex items-center gap-2 rounded-full border border-lime-300/25 bg-lime-300/10 px-4 py-2 text-sm text-lime-100 shadow-glow backdrop-blur">
+          <Sparkles className="h-4 w-4 text-lime-300" />
           Local AI-style resume helper
         </motion.div>
         <motion.h1 variants={fadeUp} className="max-w-4xl text-4xl font-semibold leading-[1.05] sm:text-6xl lg:text-7xl">
           Соберите аккуратный текст резюме за несколько минут
         </motion.h1>
-        <motion.p variants={fadeUp} className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+        <motion.p variants={fadeUp} className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
           Учебное React-приложение с live preview, локальным улучшением формулировок и быстрым копированием готового текста. Всё работает прямо в браузере и остаётся простым для изучения.
         </motion.p>
         <motion.div variants={fadeUp} className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -210,21 +210,21 @@ function Hero({ completion, onFillExample }: { completion: number; onFillExample
         transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
         className="relative"
       >
-        <div className="absolute -inset-8 rounded-[32px] bg-cyan-400/15 blur-3xl animate-pulseGlow" />
+        <div className="absolute -inset-8 rounded-[32px] bg-lime-400/15 blur-3xl animate-pulseGlow" />
         <div className="hero-card animate-float">
           <div className="mb-8 flex items-center justify-between gap-4">
             <div>
-              <p className="text-sm text-slate-400">Готовность резюме</p>
+              <p className="text-sm text-zinc-400">Готовность резюме</p>
               <p className="mt-1 text-3xl font-semibold">{completion}%</p>
             </div>
-            <div className="rounded-2xl border border-cyan-300/25 bg-cyan-300/10 p-4 text-cyan-100 shadow-glow">
+            <div className="rounded-2xl border border-lime-300/25 bg-lime-300/10 p-4 text-lime-100 shadow-glow">
               <BrainCircuit className="h-7 w-7" />
             </div>
           </div>
           <div className="h-3 overflow-hidden rounded-full bg-white/10">
-            <div className="h-full rounded-full bg-gradient-to-r from-cyan-300 to-violet-500 transition-all duration-500" style={{ width: `${completion}%` }} />
+            <div className="h-full rounded-full bg-gradient-to-r from-lime-300 to-amber-500 transition-all duration-500" style={{ width: `${completion}%` }} />
           </div>
-          <div className="mt-8 grid gap-3 text-sm text-slate-300 sm:grid-cols-3">
+          <div className="mt-8 grid gap-3 text-sm text-zinc-300 sm:grid-cols-3">
             {['Форма', 'Preview', 'Copy'].map((item) => (
               <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3 text-center">
                 {item}
@@ -268,7 +268,7 @@ function ResumeForm({ resume, onChange }: { resume: ResumeData; onChange: (id: k
   return (
     <motion.div variants={fadeUp} className="glass-panel">
       <div className="mb-6">
-        <p className="text-sm font-medium text-cyan-200">Форма</p>
+        <p className="text-sm font-medium text-lime-200">Форма</p>
         <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">Введите данные для резюме</h2>
       </div>
 
@@ -278,7 +278,7 @@ function ResumeForm({ resume, onChange }: { resume: ResumeData; onChange: (id: k
           return (
             <label key={field.id} className="field-group">
               <span className="field-label">
-                <Icon className="h-4 w-4 text-cyan-200" />
+                <Icon className="h-4 w-4 text-lime-200" />
                 {field.label}
               </span>
               {field.multiline ? (
@@ -323,19 +323,19 @@ function ResumePreview({
     <motion.div variants={fadeUp} className="glass-panel lg:sticky lg:top-24 lg:self-start">
       <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
         <div>
-          <p className="text-sm font-medium text-violet-200">Live preview</p>
+          <p className="text-sm font-medium text-amber-200">Live preview</p>
           <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">Готовый текст резюме</h2>
         </div>
-        <div className="rounded-2xl border border-violet-300/25 bg-violet-400/10 p-3 text-violet-100 shadow-violet">
+        <div className="rounded-2xl border border-amber-300/25 bg-amber-400/10 p-3 text-amber-100 shadow-amber">
           <FileText className="h-6 w-6" />
         </div>
       </div>
 
       <article className="resume-paper">
-        <div className="border-b border-slate-200 pb-5">
-          <h3 className="text-3xl font-bold text-slate-950">{resume.name || 'Ваше имя'}</h3>
-          <p className="mt-2 text-lg font-medium text-cyan-700">{resume.role || 'Желаемая профессия'}</p>
-          <p className="mt-3 text-sm text-slate-600">{resume.contacts || 'Контакты появятся здесь'}</p>
+        <div className="border-b border-zinc-200 pb-5">
+          <h3 className="text-3xl font-bold text-zinc-950">{resume.name || 'Ваше имя'}</h3>
+          <p className="mt-2 text-lg font-medium text-lime-700">{resume.role || 'Желаемая профессия'}</p>
+          <p className="mt-3 text-sm text-zinc-600">{resume.contacts || 'Контакты появятся здесь'}</p>
         </div>
 
         <PreviewBlock title="Навыки" text={resume.skills || 'Добавьте ключевые навыки: технологии, инструменты, подходы.'} />
@@ -343,7 +343,7 @@ function ResumePreview({
         <PreviewBlock title="Опыт или учебные проекты" text={resume.experience || 'Опишите проекты, практику или учебные работы.'} />
       </article>
 
-      <pre className="mt-5 max-h-64 overflow-auto whitespace-pre-wrap rounded-2xl border border-white/10 bg-black/25 p-4 text-sm leading-6 text-slate-300">
+      <pre className="mt-5 max-h-64 overflow-auto whitespace-pre-wrap rounded-2xl border border-white/10 bg-black/25 p-4 text-sm leading-6 text-zinc-300">
         {resumeText}
       </pre>
 
@@ -368,8 +368,8 @@ function ResumePreview({
 function PreviewBlock({ title, text }: { title: string; text: string }) {
   return (
     <section className="mt-5">
-      <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500">{title}</h4>
-      <p className="mt-2 leading-7 text-slate-700">{text}</p>
+      <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-zinc-500">{title}</h4>
+      <p className="mt-2 leading-7 text-zinc-700">{text}</p>
     </section>
   );
 }
@@ -377,7 +377,7 @@ function PreviewBlock({ title, text }: { title: string; text: string }) {
 function Footer() {
   return (
     <footer className="border-t border-white/10 px-5 py-10 sm:px-8">
-      <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-slate-400 sm:flex-row">
+      <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-zinc-400 sm:flex-row">
         <p>AI Resume Builder — учебный frontend-проект.</p>
         <p>React + TypeScript + Tailwind CSS + Framer Motion</p>
       </div>
